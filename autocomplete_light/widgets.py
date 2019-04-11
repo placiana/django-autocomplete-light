@@ -301,7 +301,7 @@ class TextWidget(WidgetBase, forms.TextInput):
                 autocomplete_js_attributes, extra_context, registry,
                 widget_template, widget_attrs)
 
-    def render(self, name, value, attrs=None):
+    def render(self, name, value, attrs=None, renderer=None)):
         """ Proxy Django's TextInput.render() """
 
         autocomplete = self.autocomplete(values=value)
